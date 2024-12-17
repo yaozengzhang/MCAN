@@ -1,4 +1,5 @@
-The date can be found in the related paper.
+The data can be found in the related paper. To view the changes in various metrics during model training, you need to log in to WANDB in advance to access them.
+
 The Ablation folders contain files for the variant networks of MCAN, used in ablation experiments.
 The get_text_writing_style_feature folders include files for extracting text writing style features, achieved by pre-training a text-GCN. BERT_ResNet50_feature folder include files for extracting text semantic features and image semantic-physical features
 Before training, four types of features should be stored in four separate folders.
