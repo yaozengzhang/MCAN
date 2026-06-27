@@ -59,10 +59,11 @@ The output is a single logit for binary rumor detection.
 
 ### Twitter
 
-- Dataset: MediaEval 2015 Verifying Multimedia Use
-- GitHub: https://github.com/MKLab-ITI/image-verification-corpus/tree/master/mediaeval2015
+- Dataset: MediaEval 2016 Verifying Multimedia Use
+- GitHub: https://github.com/MKLab-ITI/image-verification-corpus/tree/master/mediaeval2016
 - Source repository: MKLab-ITI/image-verification-corpus
 - Citation: Boididou, C., Papadopoulos, S., Zampoglou, M., Apostolidis, L., Papadopoulou, O., & Kompatsiaris, Y. (2018). Detection and visualization of misleading content on Twitter. International Journal of Multimedia Information Retrieval, 7(1), 71-86.
+- Split source: Twitter train IDs are derived from `mediaeval2016/devset/posts.txt`, and test IDs are derived from `mediaeval2016/testset/posts_groundtruth.txt`. Labels are mapped as `real -> 0` and `fake -> 1`.
 
 ### Weibo
 
@@ -111,7 +112,7 @@ Each row is tab-separated:
 data_id    split    label
 ```
 
-- `twitter_tvt_list.txt`: Twitter/MediaEval 2015 sample split list.
+- `twitter_tvt_list.txt`: Twitter/MediaEval 2016 sample split list.
 - `weibo_tvt_list.txt`: Weibo sample split list.
 
 These files follow the dataset split definitions from the corresponding datasets listed in Data Sources. They are split and label lists derived from the dataset sources, not raw text, raw images, or generated feature tensors. Keep these lists aligned with the prepared sample files and the four feature folders during reproduction.
