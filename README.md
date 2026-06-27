@@ -110,7 +110,7 @@ data_id    split    label
 - `twitter_tvt_list.txt`: Twitter/MediaEval 2015 sample split list.
 - `weibo_tvt_list.txt`: Weibo sample split list.
 
-These files are split and label lists derived from the dataset sources. They are not raw text, raw images, or generated feature tensors. Keep these lists aligned with the prepared sample files and the four feature folders during reproduction.
+These files follow the dataset split definitions from the corresponding datasets listed in Data Sources. They are split and label lists derived from the dataset sources, not raw text, raw images, or generated feature tensors. Keep these lists aligned with the prepared sample files and the four feature folders during reproduction.
 
 ## Feature Preparation
 
@@ -132,6 +132,8 @@ raw text corpus
 -> GCN training
 -> 200-dimensional text graph feature
 ```
+
+The TextGCN writing-style feature extraction code in this repository uses the Twitter dataset as the included example.
 
 ## Training
 
