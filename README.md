@@ -16,6 +16,7 @@ MCAN/
 ├── MCAN.py
 ├── MCAN_twitter_zt.py
 ├── MCAN_weibo_zt.py
+├── data_id/
 ├── Abolution/
 ├── BERT_RESNET50_feature/
 └── get_text_writing_style_feature/
@@ -26,6 +27,7 @@ MCAN/
 - `MCAN.py`: defines the MCAN network. The main class is `DECM`, which fuses BERT text, TextGCN, original image, and ELA image features through cross-attention layers and outputs a binary rumor prediction.
 - `MCAN_twitter_zt.py`: Twitter training script. It loads prepared Twitter sample files, four feature folders, train/test split labels, initializes wandb, trains MCAN, and reports metrics.
 - `MCAN_weibo_zt.py`: Weibo training script. It follows the same training structure as the Twitter script and uses the Weibo split list.
+- `data_id/`: dataset split lists for Twitter and Weibo. These files store sample IDs, split markers, and labels according to the original dataset-source split used in the experiments.
 - `Abolution/`: ablation-model files for removing or combining different modalities, such as BERT-only, image-only, without GCN, without ELA, and pairwise feature combinations.
 - `BERT_RESNET50_feature/`: feature extraction scripts for BERT text features, original/ELA image ResNet50 features, and ELA image generation.
 - `get_text_writing_style_feature/`: TextGCN-related code for text preprocessing, graph construction, GCN training, and writing-style feature generation.
@@ -88,6 +90,27 @@ ela_resnet50_feature_folder/{data_id}.pt
 ```
 
 The split files used by the training scripts contain sample IDs, train/valid/test markers, and labels. The Weibo script uses train/valid/test markers. The Twitter script uses the dataset split labels available in the prepared split file.
+
+## Split Lists
+
+The `data_id/` folder contains the split-list files used to connect sample IDs, feature tensors, labels, and train/validation/test partitions:
+
+```text
+data_id/
+├── twitter_tvt_list.txt
+└── weibo_tvt_list.txt
+```
+
+Each row is tab-separated:
+
+```text
+data_id    split    label
+```
+
+- `twitter_tvt_list.txt`: Twitter/MediaEval 2015 sample split list.
+- `weibo_tvt_list.txt`: Weibo sample split list.
+
+These files are split and label lists derived from the dataset sources. They are not raw text, raw images, or generated feature tensors. Keep these lists aligned with the prepared sample files and the four feature folders during reproduction.
 
 ## Feature Preparation
 
