@@ -1,5 +1,9 @@
 # MCAN
 
+## Paper Citation
+
+Zhang, Y., Ma, J., & Jia, Y. (2025). MCAN: multimodal cross-aware network for fake news detection by extracting semantic-physical feature consistency. The Journal of Supercomputing, 81, Article 299. Springer. DOI: https://doi.org/10.1007/s11227-024-06815-1
+
 MCAN is a multimodal rumor detection project. The model uses four pre-extracted features for each text-image sample:
 
 - BERT text semantic feature: 768 dimensions
