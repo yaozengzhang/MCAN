@@ -167,6 +167,18 @@ Weibo project: MTAP_weibo_zt
 
 Log in to wandb before running if online experiment tracking is needed. The scripts can save model weights under `best_weights/` when weight saving is enabled.
 
+## Test Results Figures
+
+The following figures show the test-set results obtained by selecting the best checkpoint according to validation performance during training.
+
+Twitter dataset result:
+
+![Twitter dataset test results](assets/task1B_twitter.svg)
+
+Weibo dataset result:
+
+![Weibo dataset test results](assets/task1B_weibo.svg)
+
 ## Ablation Experiments
 
 The `Abolution/` folder contains MCAN variants for ablation studies:
